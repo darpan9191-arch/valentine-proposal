@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disha ❤️</title>
+  <style>
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: #ddd;
+      position: absolute;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://i.imgur.com/0y8Ftya.png" width="70">
+  <h2 id="question">Disha, will you be my Valentine?</h2>
+
+  <div id="buttons">
+    <button id="yes" onclick="yesClicked()">Yes</button>
+    <button id="no">No</button>
+  </div>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random() * 300 + "px";
+    noBtn.style.top = Math.random() * 300 + "px";
+  });
+
+  function yesClicked() {
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("result").innerHTML = `
+      <h2>YAY! 🎉</h2>
+      <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif">
+      <p style="margin-top:15px; font-size:16px; color:#444;">
+        You just made my day ❤️  
+        Can’t wait to make beautiful memories with you, Disha.
+      </p>
+    `;
+  }
+</script>
+
+</body>
+</html>
